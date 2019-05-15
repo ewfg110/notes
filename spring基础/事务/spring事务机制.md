@@ -150,6 +150,7 @@ public boolean rollbackOn(Throwable ex) {
 5. ```commitTransactionAfterReturning```方法里面根据具体情况判断进行提交或者回滚。
 
 #### 一种简单的主从设置
+目前我们生产环境业务量不大，一主一从足够了。
 ##### 实现思路
 1. 有一个管理器可以配置多个数据源并根据指定的key返回特定的数据源。
 2. 通过编码或者拦截器的形式在获取DataSource的Connection前指定选择的key。
